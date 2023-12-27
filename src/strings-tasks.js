@@ -20,8 +20,8 @@
  *   getStringLength(undefined) => 0
  */
 function getStringLength(value) {
-  if (value === undefined || null) {
-    return 0;
+  if (typeof value === 'string') {
+    return value.length;
   }
   return value.length;
 }
@@ -191,7 +191,7 @@ function sumOfCodes(/* str */) {
  * @param {string} str - The input string.
  * @param {string} substr - The substring to check.
  * @return {boolean} - Returns true if str starts with substr, false otherwise.
- *
+ *https://github.com/strateg213/core-js-strings.git
  * @example:
  *   startsWith('Hello World', 'World') => false
  *   startsWith('Hello World', 'Hello') => true
